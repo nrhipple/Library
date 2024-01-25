@@ -8,6 +8,8 @@ public class Patron {
 	String lastName;
 	final int BOOK_LIMIT = 3;
 	Book[] borrowedBooks = new Book[BOOK_LIMIT];
+	int counter = 0;
+	
 	
 	/**
 	 * Constructor for the Patron Object.
@@ -43,5 +45,15 @@ public class Patron {
 		return this.borrowedBooks;
 	}
 	
+	/**
+	 * This method is to used to put the Book Object into the 
+	 * borrowedBooks array.
+	 * 
+	 * @param borrowedBook is the book about to be borrowed
+	 */
 	
+	public void borrowBook(Book borrowedBook) {
+		this.borrowedBooks[this.counter] = borrowedBook;
+		this.counter ++;
+	}
 }
